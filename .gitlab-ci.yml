@@ -1,11 +1,24 @@
 # Specify the stages for the CI pipeline
 stages:
+  - build
   - test
 
 # Define the jobs for each stage
+build:
+  stage: build
+  script:
+    - echo "Building the project..."  # Placeholder for actual build commands
+
+unit_test:
+  stage: test
+  image: node:latest
+  script:
+    - npm install     # Install dependencies for testing
+    - npm test        # Run unit tests (replace with actual test command)
+
 html_css_validation:
   stage: test
-  image: node:latest  # Using a Node.js image for simplicity
+  image: node:latest
   script:
     - npm install html-validate -g     # Install HTML validation tool
     - html-validate --format=stylish . # Validate HTML files
