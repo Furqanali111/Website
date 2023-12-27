@@ -1,0 +1,13 @@
+# Specify the stages for the CI pipeline
+stages:
+  - test
+
+# Define the jobs for each stage
+html_css_validation:
+  stage: test
+  image: node:latest  # Using a Node.js image for simplicity
+  script:
+    - npm install html-validate -g     # Install HTML validation tool
+    - html-validate --format=stylish . # Validate HTML files
+    - npm install stylelint -g        # Install CSS linting tool
+    - stylelint "styles/*.css"        # Lint CSS files
