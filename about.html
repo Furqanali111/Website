@@ -1,45 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <title>Security For Keyless Cars</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333333bb;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .srch {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+        background: linear-gradient(to top, rgba(29, 29, 29, 1)10%, rgba(29, 29, 29, 0.4)90%), url('p8.jpg');
+        background-position: center;
+        background-size: cover; /* Change from 'cover' to 'contain' */
+        height: 108vh;
+        
+        }
+
+        .blackpic{
+            background: linear-gradient(to top, rgba(128, 126, 126, 0.273)5%, rgba(29, 29, 29, 0)90%), rgb(29,29,29);
+            /*background-color: rgb(29,29,29);*/
+            background-position: center;
+            background-size: cover;
+            
+        }
+        .content1,
+        .content2,
+        .content3,
+        .content4 {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .content1.active,
+        .content2.active,
+        .content3.active,
+        .content4.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content1 h1,
+        .content2 h1,
+        .content3 h1,
+        .content4 h1 {
+            color: #99a6de;
+            margin-bottom: 20px;
+            padding-top: 10%;
+        }
+
+        .content1 h2,
+        .content2 h2,
+        .content3 h2,
+        .content4 h2 {
+            color: #99a6de;
+            margin-top: 20px; /* Added margin for better separation */
+        }
+
+        .content1 p,
+        .content2 p,
+        .content3 p,
+        .content4 p {
+            line-height: 1.6;
+            color: #ffffff;
+            margin-left: 18%;
+            margin-right: 18%;
+            padding-bottom: 25px;
+        }
+
+        footer {
+            background-color: #3333335f;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+
+        ul li a:hover{
+            color: antiquewhite;
+        }
+
+
+    </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <div class = "icon">
+            <div class="icon">
                 <h2 class="logo">KCS</h2>
-
             </div>
             <div class="menu">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="update.html">Updates</a></li>     
+                    <li><a href="update.html">Updates</a></li>
                     <li><a href="contact.html">Contact Info</a></li>
-                    <li><a href="security.html">Security overview</a></li>
-                    <li><a href="technology.html">Technology Explanantion</a></li>
-                   
+                    <li><a href="technology.html">Technology Explanation</a></li>
                 </ul>
             </div>
-        <div class="aboutus">
-            <h1>Purpose of our Website</h1>
-            <p>Welcome to Keyless Cars Security, your go-to resource for comprehensive information on securing keyless car systems.<br>
-            Our mission is to empower and educate users about the challenges and solutions related to keyless car security.<br>
-            As technology evolves, ensuring the safety of your vehicle becomes increasingly crucial, and we are here to guide you<br>
-            through the intricacies of safeguarding your keyless entry systems</p>
-        </div>       
-        <div class="disclaimer">
-            <h1>Disclaimer</h1>
-            <p>The content presented on Keyless Cars Security is for informational purposes only. While we strive to provide accurate and up-to-date information, the rapidly changing landscape of technology may result in occasional discrepancies<br>
-               Keyless Cars Security is not responsible for any security incidents or unauthorized access to vehicles. Users are encouraged to follow recommended security practices and consult with automotive security professionals for specific concerns<br>
-               We value user feedback and actively work to enhance the quality and relevance of our content. Your input is crucial in our mission to provide valuable and reliable information to the keyless car security community<br>
-               Thank you for being a part of Keyless Cars Security. Together, let's navigate the landscape of keyless car security and ensure a safer driving experience for everyone<br></p>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
         </div>
+        <div class="content1" id="about">
+            <h1>About Keyless Car Security</h1>
+            <p>Welcome to Keyless Car Security, where we prioritize the safety and security of your vehicles. At our core, we are committed to delivering cutting-edge solutions to protect your keyless car systems from emerging threats.</p>
+        </div>
+        <div class="content2" id="mission">
+            <h1>Our Mission</h1>
+            <p>Our mission at Keyless Car Security is to empower car owners with the knowledge and tools to make informed decisions about the security of their keyless entry systems. We strive to stay ahead of potential security threats and provide effective solutions to safeguard your vehicles.</p>
+        </div>
+       
+        <div id="blackpic" class="blackpic">
+            <div class="content3" id="team">
+                <h1>Our Team</h1>
+                <p>We have a dedicated team of experts who are passionate about automotive security. Meet the minds behind Keyless Car Security:</p>
+                <ul>
+                    <li><strong>John Doe</strong> - Chief Security Officer</li>
+                    <li><strong>Alice Smith</strong> - Lead Security Analyst</li>
+                    <li><strong>Bob Johnson</strong> - Technical Support Specialist</li>
+                </ul>
+            </div>
+            <div class="content4" id="contact">
+                <h1>Contact Us</h1>
+                <p>If you have any questions or concerns, please feel free to reach out to our team:</p>
+                <p>Email: info@keylesscarsecurity.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
 
+        </div>
+        <footer>
+            <p>&copy; 2023 Keyless Car Security. All rights reserved.</p>
+        </footer>
+    </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentSections = document.querySelectorAll(".content1, .content2, .content3, .content4");
+
+            function checkInView() {
+                contentSections.forEach(function (section) {
+                    var bounding = section.getBoundingClientRect();
+                    if (bounding.top >= window.innerHeight*0 && bounding.bottom <= window.innerHeight) {
+                        section.classList.add("active");
+                    } else {
+                        section.classList.remove("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkInView);
+            window.dispatchEvent(new Event("scroll"));
+        });
+    </script>
 </body>
+
 </html>

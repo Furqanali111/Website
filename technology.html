@@ -1,17 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <title>Security For Keyless Cars</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333333bb;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .srch {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+            background: linear-gradient(to top, rgba(129, 147, 172, 1)1%, rgba(0,0,0,0.4)99%), url('security1.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 75.3vh;
+            
+        }
+
+        .content5 {
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+        }
+
+        .content5 h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .popup-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .popup-item {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .popup-item1 img {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            padding-left: 30px;
+            padding-top: 20px;
+            
+        }
+
+        .popup-item2 img {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            padding-left: 30px;
+            padding-top: 20px;
+            
+        }
+
+	    .popup-item3 img {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            padding-left: 30px;
+            padding-top: 20px;
+            
+            
+        }
+
+        .popup-item1:hover {
+            transform: scale(1.1);
+        }
+
+        .popup-item2:hover {
+            transform: scale(1.1);
+        }
+
+	    .popup-item3:hover {
+            transform: scale(1.1);
+        }
+
+        .content5 p {
+            color: #ffffff; /* Change the color to your preference */
+        }
+
+        .keylessfob-section{
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #000000;
+            padding-top: 10px;
+
+        }
+        .sensors-section {
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #000000;
+            padding-top: 10px;
+        }
+
+	    .communication-protocols-section {
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #000000;
+            padding-top: 10px;
+        }
+
+        .keylessfob-section p{
+            padding-bottom: 10%;
+            color: white;
+        }
+
+        .sensors-section p{
+            padding-bottom: 10%;
+            color: white;
+        }
+
+	    .communication-protocols-section p{
+	    padding-bottom: 10%;
+            color: white;
+        }
+	
+
+        .sensors-section h3 {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        
+        
+        
+        .keylessfob-section h3 {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        
+       
+	
+	    .communication-protocols-section h3 {
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .navyblue{
+            background: linear-gradient(to top, rgba(1, 39, 92, 0.273)5%, rgba(1, 39, 92, 0.273)90%), rgb(1, 39, 92, 0.273);
+            /*background-color: rgb(29,29,29);*/
+            background-position: center;
+            background-size: cover;
+        }
+
+        
+       
+
+
+       /* .keylessfob-section {
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url('security1.jpg');
+        }
+
+        .sensors-section {
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url('security1.jpg');
+        }
+	
+	    .communication-protocols-section {
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url('security1.jpg');
+        }
+*/
+        footer {
+            background-color: #3333335f;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+
+        ul li a:hover {
+            color: antiquewhite;
+        }
+    </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <div class = "icon">
+            <div class="icon">
                 <h2 class="logo">KCS</h2>
-
             </div>
             <div class="menu">
                 <ul>
@@ -20,26 +290,75 @@
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="update.html">Updates</a></li>
                     <li><a href="contact.html">Contact Info</a></li>
-                    <li><a href="security.html">Security overview</a></li>
-                    <li><a href="technology.html">Technology Explanantion</a></li>
-                    
+                    <li><a href="technology.html">Technology Explanation</a></li>
                 </ul>
             </div>
-        <div class="work">
-            <h1>How It Works</h1>
-            <p class="p1">Keyless entry systems represent a cutting-edge fusion of convenience and security in modern vehicles. At the heart of this technology lies a sophisticated interplay of electronic components that revolutionize the traditional act of unlocking and starting a car. Keyless fobs, equipped with advanced radio frequency identification (RFID) technology, communicate seamlessly with sensors embedded in the vehicle. When a driver approaches, the fob and the car engage in a secure dialogue, verifying the fob's authenticity. Once authenticated, the system grants access, allowing the driver to effortlessly enter and start the vehicle without physical contact.</p>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
         </div>
-        <div class="work1">    
+        <div class="content5" id="technology">
             <h1>Technology Used</h1>
-            <h3>Keyless Fobs</h3>
-            <p class="p2">Keyless fobs are equipped with RFID technology, which enables wireless communication between the fob and the vehicle. RFID uses electromagnetic fields to transmit data, allowing for secure and contactless interactions. The fob emits a unique identifier that the vehicle recognizes, establishing a secure link for authentication.</p>
-            <h3>Sensors</h3>
-            <p class="p3">Proximity sensors play a crucial role in keyless entry systems. These sensors detect the presence of the keyless fob in close proximity to the vehicle. When the fob is within range, the sensors trigger the system to respond, allowing for actions such as unlocking doors or starting the engine. This technology enhances user convenience by automating processes based on the user's proximity.</p>
-            <h3>Communication Protocols</h3>
-            <p class="p4">To ensure the security of communication between the keyless fob and the vehicle, sophisticated encryption algorithms are employed. These algorithms encode the signals transmitted between the fob and the car, making it extremely challenging for unauthorized parties to intercept or manipulate the data. This robust encryption is a fundamental element in safeguarding against potential security threats.</p>
-        </div>    
+            <p>these are the technologies that are used in keyless car.</p>
+            <div class="popup-container">
+                <div class="popup-item1" onclick="scrollToSection('keylessfob-section')">
+                    <img src="p18.jpg" alt="keylessfob">
+                    <p>Keyless Fob</p>
+                </div>
+                <div class="popup-item2" onclick="scrollToSection('sensors-section')">
+                    <img src="p20.jpg" alt="sensors">
+                    <p>Sensors</p>
+                </div>
+		<div class="popup-item3" onclick="scrollToSection('communication-protocols-section')">
+                    <img src="security2.jpg" alt="communication protocols">
+                    <p>Communication Protocol</p>
+                </div>
+            </div>
+        </div>
 
+        
+        <div id="navyblue" class="navyblue">
+            <div id="keylessfob-section" class="keylessfob-section">
+                <h3>Keyless Fob</h3>
            
+                <p class="paragraph-color">
+                    Keyless fobs are equipped with RFID technology, which enables wireless communication between the fob and the vehicle. RFID uses electromagnetic fields to transmit data, allowing for secure and contactless interactions. The fob emits a unique identifier that the vehicle recognizes, establishing a secure link for authentication
+                </p>
+                
+            </div>
     
+            <div id="sensors-section" class="sensors-section">
+                <h3>Sensors</h3>
+               
+                <p class="paragraph-color">
+                    Proximity sensors play a crucial role in keyless entry systems. These sensors detect the presence of the keyless fob in close proximity to the vehicle. When the fob is within range, the sensors trigger the system to respond, allowing for actions such as unlocking doors or starting the engine. This technology enhances user convenience by automating processes based on the user's proximity.
+                </p>
+                
+            </div>
+    
+            <div id="communication-protocols-section" class="communication-protocols-section">
+                    <h3>Communication Protocols</h3>
+                
+                    <p class="paragraph-color">
+                    To ensure the security of communication between the keyless fob and the vehicle, sophisticated encryption algorithms are employed. These algorithms encode the signals transmitted between the fob and the car, making it extremely challenging for unauthorized parties to intercept or manipulate the data. This robust encryption is a fundamental element in safeguarding against potential security threats.
+                    </p>
+                    
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Keyless Car Security. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 </html>

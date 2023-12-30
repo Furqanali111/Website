@@ -1,17 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <title>Security For Keyless Cars</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333333bb;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .srch {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+        background:linear-gradient(to top, rgba(0, 0, 0, 0.4)20%, rgba(0, 0, 0, 0.9)80%), url('p6.jpg');
+        background-position: center;
+        background-size: cover; /* Change from 'cover' to 'contain' */
+        height: 100vh;
+        }
+
+        .content2 {
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        
+
+        
+        .feedback-form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .feedback-form div {
+            margin-bottom: 20px;
+        }
+
+        .feedback-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #c5c1c1;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(252, 252, 252, 0.675);
+            color: black;
+            font-weight: bolder;
+            
+        }
+
+        .feedback-form textarea {
+            height: 100px;
+        }
+
+        .feedback-form button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .feedback-form button:hover {
+            background-color: #45a049;
+        }
+
+        
+
+        footer {
+            background-color: #3333335f;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+        ul li a:hover{
+
+        color: antiquewhite;
+        }
+
+
+    </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <div class = "icon">
+            <div class="icon">
                 <h2 class="logo">KCS</h2>
-
             </div>
             <div class="menu">
                 <ul>
@@ -20,35 +191,38 @@
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="update.html">Updates</a></li>
                     <li><a href="contact.html">Contact Info</a></li>
-                    <li><a href="security.html">Security overview</a></li>
-                    <li><a href="technology.html">Technology Explanantion</a></li>
-                    
+                    <li><a href="technology.html">Technology Explanation</a></li>
                 </ul>
             </div>
-            <div class="feedback">
-                <h1>Provide Feedback</h1>
-                <p class="para1">please provide your feedback on the effectiveness of the provided security information</p>
-                <input class="fb" type="text" name="" placeholder="Type to text">
-                
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">search</button></a>
             </div>
-            <div class="IncidentReporting">
-                <h1>Incident Rerporting</h1>
-                <p class="para2">please report security incidents or vulnerabilities you have encountered</p>
-                <input class="ir" type="text" name="" placeholder="Type to text">
-          
-            </div> 
-            <div class="QA">
-                <h1>Q/A</h1>
-                <p class="para3">please feel free to ask questions about keyless car security</p>
-                <input class="qa" type="text" name="" placeholder="Type to text">
-            </div>  
-            <div>
-                <a href="home.html"><button class="submit">submit</button></a>
-            </div>
-            
-        </div>    
-        
-    </div>               
-    
+        </div>
+        <div class="content2" id="feedback">
+            <h1>Feedback</h1>
+            <p>Collect and display customer feedback here.</p>
+
+            <form class="feedback-form" action="#" method="post">
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="q/a">Q/A:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Incident Reporting:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; 2023 Keyless Car Security. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
+
 </html>

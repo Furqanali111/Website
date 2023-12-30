@@ -1,41 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <title>Security For Keyless Cars</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333333bb;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .srch {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+        background: linear-gradient(to top, rgba(0,0,0,0.3)50%, rgba(0,0,0,0.3)50%),url('p5.jpg');
+        background-position: center;
+        background-size: cover; /* Change from 'cover' to 'contain' */
+        height: 100vh;
+        }
+
+        .content4 {
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            color: #eae7e7;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        .contact-form div {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #c5c1c1;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(213, 211, 211, 0.63);
+            color: black;
+            font-weight: bolder;
+            
+        }
+
+        .contact-form textarea {
+            height: 100px;
+        }
+
+        .contact-form button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        
+
+        footer {
+            background-color: #3333335f;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+        ul li a:hover{
+
+        color: antiquewhite;
+        }
+
+
+    </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <div class = "icon">
+            <div class="icon">
                 <h2 class="logo">KCS</h2>
-
             </div>
             <div class="menu">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="update.html">Updates</a></li>     
+                    <li><a href="update.html">Updates</a></li>
                     <li><a href="contact.html">Contact Info</a></li>
-                    <li><a href="security.html">Security overview</a></li>
-                    <li><a href="technology.html">Technology Explanantion</a></li> 
+                    <li><a href="technology.html">Technology Explanation</a></li>
                 </ul>
             </div>
-        <div class="contactus">
-            <h1>Contact us</h1>  
-            <p class="para4">This contact form is for the users who have inquiries or want to share additional security insights</p>
-            <input class="frst" type="text" name="" placeholder="first name">
-            <input class="lst"  type="text" name="" placeholder="last name">
-            <input class="eml"  type="email" name="" placeholder="Email Address">
-            <textarea rows="5" cols="60" name="message" placeholder="Enter Text"></textarea>
-            <a href="home.html"><button class="btn1">Send Message</button></a>
-            
-        </div>    
-          
-            
-    
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+        </div>
+        <div class="content4" id="contact">
+            <h1>Contact Info</h1>
+            <p>This contact form is for the users who have inquiries or want to share additional security insights</p>
+
+            <form class="contact-form" action="#" method="post">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+           
+        </div>
+        <footer>
+            <p>&copy; 2023 Keyless Car Security. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
+
 </html>

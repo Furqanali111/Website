@@ -1,17 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     
     <title>Security For Keyless Cars</title>
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333333bb;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .srch {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main {
+            background: linear-gradient(to top, rgba(0,0,0,0.3)50%, rgba(0,0,0,0.3)50%), url('p7.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .content3 {
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+        }
+
+        .content3 h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .popup-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .popup-item {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .popup-item1 img {
+            width: 65%;
+            height: 350px;
+            border-radius: 100%;
+            
+        }
+
+        .popup-item2 img {
+            width: 90%;
+            height: 350px;
+            border-radius: 100%;
+            
+        }
+
+        .popup-item1:hover {
+            transform: scale(1.1);
+        }
+
+        .popup-item2:hover {
+            transform: scale(1.1);
+        }
+
+        .content3 p {
+            color: #ffffff; /* Change the color to your preference */
+        }
+
+        .blog-section{
+            padding: 300px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #000000;
+            padding-top: 10px;
+
+        }
+        .news-section {
+            padding: 300px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #000000;
+            padding-top: 10px;
+        }
+
+        .blog-section p{
+            padding-bottom: 10%;
+            color: white;
+        }
+
+        .news-section p{
+            padding-bottom: 10%;
+            color: white;
+        }
+
+        .news-section h3 {
+            color: white;
+            font-weight: bold;
+        }
+
+        
+        .news-section h2 {
+            color: white;
+            font-weight: bold;
+            font-size: 70px;
+        }
+        
+        .blog-section h3 {
+            color: white;
+            font-weight: bold;
+        }
+
+        
+        .blog-section h2 {
+            color: white;
+            font-weight: bold;
+            font-size: 70px;
+        }
+
+        .blog-section {
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url('p7.jpg');
+        }
+
+        .news-section {
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url('p7.jpg');
+        }
+
+        footer {
+            background-color: #3333335f;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+
+        ul li a:hover {
+            color: antiquewhite;
+        }
+    </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <div class = "icon">
+            <div class="icon">
                 <h2 class="logo">KCS</h2>
-
             </div>
             <div class="menu">
                 <ul>
@@ -20,19 +241,78 @@
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="update.html">Updates</a></li>
                     <li><a href="contact.html">Contact Info</a></li>
-                    <li><a href="security.html">Security overview</a></li>
-                    <li><a href="technology.html">Technology Explanantion</a></li>
-                    
+                    <li><a href="technology.html">Technology Explanation</a></li>
                 </ul>
             </div>
-        <div class="update">
-            <h1>BLOG</h1>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
         </div>
-        <div class="image1">
-            <p class="p5">caption for image 1</p>
+        <div class="content3" id="update">
+            <h1>Updates</h1>
+            <p>Share the latest updates and news about your company.</p>
+            <div class="popup-container">
+                <div class="popup-item1" onclick="scrollToSection('blog-section')">
+                    <img src="p13.jpg" alt="Blog">
+                    <p>Blog</p>
+                </div>
+                <div class="popup-item2" onclick="scrollToSection('news-section')">
+                    <img src="p15.jpg" alt="Latest News">
+                    <p>Latest News</p>
+                </div>
+            </div>
         </div>
 
+        <div id="blog-section" class="blog-section">
+            <h2>Blog</h2>
+            <h3>Enhancing Keyless Car Security: A Comprehensive Guide
+            </h3>
+            <p class="paragraph-color">
+                In this blog post, we delve into the various strategies and technologies you can implement to enhance the security of your keyless car entry system. From understanding common vulnerabilities to practical tips for safeguarding your vehicle, this guide covers it all.
+            </p>
+            <h3>Title: "The Evolution of Keyless Fobs: What You Need to Know"
+            </h3>
+            <p class="paragraph-color">
+                Explore the evolution of keyless fobs and their role in modern vehicle security. Learn about the advancements in RFID technology, encryption protocols, and how manufacturers are addressing emerging security challenges in keyless entry systems.
+            </p>
+            <h3>Title: "Tips for Car Owners: Securing Your Keyless Entry System"
+            </h3>
+            <p class="paragraph-color">   
+                Our experts share valuable tips for car owners to proactively secure their keyless entry systems. From simple practices to advanced security measures, discover actionable steps to protect your vehicle from potential threats.</p>
+        </div>
+
+        <div id="news-section" class="news-section">
+            <h2>Latest News</h2>
+            <h3>Title: "Industry Breakthrough: Next-Gen Keyless Entry Unveiled"
+            </h3>
+            <p class="paragraph-color">
+                Stay updated on the latest breakthroughs in keyless entry technology. Learn about the unveiling of next-generation keyless entry systems that promise enhanced security features and improved user experience. Get a sneak peek into the future of keyless car security.
+            </p>
+            <h3>Title: "Security Alerts: Recent Threats to Keyless Cars"
+            </h3>
+            <p class="paragraph-color">   
+                In this news update, we highlight recent security threats targeting keyless cars. Stay informed about potential risks, vulnerabilities, and recommended countermeasures to keep your vehicle secure in the face of evolving threats.</p>
             
-    
+            <h3>Title: "Collaboration for Security: Automotive and Tech Giants Join Forces"
+            </h3>
+            <p class="paragraph-color">
+                Discover how major automotive and technology companies are joining forces to address keyless car security challenges. Learn about collaborative efforts, industry initiatives, and the collective commitment to advancing the security standards of keyless entry systems.
+            
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Keyless Car Security. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
+
 </html>
