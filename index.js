@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mongoose = import ('mongoose');
+    const mongoose = require ('mongoose');
     // Define the schema for feedback
     const feedbackSchema = new mongoose.Schema({
         name: String,
