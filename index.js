@@ -1,56 +1,50 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors'); // Import the cors middleware
 
-document.addEventListener('DOMContentLoaded', () => {
-    const mongoose = require ('mongoose');
-    // Define the schema for feedback
-    const feedbackSchema = new mongoose.Schema({
-        name: String,
-        email: String,
-        feedback: String
-    });
+const app = express();
+const port = 3000;
 
-    // Create a Mongoose model based on the schema
-    const Feedback = mongoose.model('Feedback', feedbackSchema);
+// Connect to MongoDB Atlas
+const uri = "mongodb+srv://furqan121:kingarthur121@atlascluster.iwusgth.mongodb.net/feedback?retryWrites=true&w=majority";
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log('Connected to MongoDB Atlas!'))
+.catch(err => console.error('Error connecting to MongoDB Atlas:', err.message));
 
-    // Connection URL with the database name included
-    const uri = "mongodb+srv://furqan121:kingarthur121@atlascluster.iwusgth.mongodb.net/feedback?retryWrites=true&w=majority";
+// Define the feedback schema
+const feedbackSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    feedback: String
+});
 
-    // Connect to MongoDB Atlas
-    mongoose.connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }).then(() => {
-        console.log('Connected to MongoDB Atlas!');
-    }).catch((err) => {
-        console.error('Error connecting to MongoDB Atlas:', err.message);
-    });
+// Create a Mongoose model based on the schema
+const Feedback = mongoose.model('feedback', feedbackSchema);
 
-    const form = document.querySelector('.contact_form');
+// Middleware for parsing JSON request bodies
+app.use(bodyParser.json());
 
-    async function handleSubmit(event) {
-        event.preventDefault();
+// Use cors middleware to enable CORS
+app.use(cors());
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        try {
-            // Create a new feedback document
-            const newFeedback = new Feedback({
-                name,
-                email,
-                feedback: message
-            });
-
-            // Save the feedback document to the database
-            await newFeedback.save();
-            console.log('Feedback added successfully!');
-            alert('Feedback added successfully!');
-            form.reset(); // Reset the form after successful submission
-        } catch (error) {
-            console.error('Error while saving feedback:', error.message);
-            alert('Error while saving feedback. Please try again.');
-        }
+// Route for handling feedback submissions
+app.post('/feedback', async (req, res) => {
+    console.log("call")
+    try {
+        const newFeedback = new Feedback(req.body);
+        await newFeedback.save();
+        res.json({ message: 'Feedback added successfully!' });
+    } catch (error) {
+        console.error('Error while saving feedback:', error.message);
+        res.status(500).json({ message: 'Error while saving feedback. Please try again.' });
     }
+});
 
-    form.addEventListener('submit', handleSubmit);
+// Start the server
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
 });
